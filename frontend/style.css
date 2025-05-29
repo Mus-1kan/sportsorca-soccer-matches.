@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body, html {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hero-container {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+}
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #f00;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-top: 10%;
+}
+.hero-text h1 {
+  font-size: 64px;
+  text-shadow: 2px 2px 8px #000;
+}
+.hero-text p {
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+.cta-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cta-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px crimson;
+}
+
+/* Match Cards */
+.match-slider {
+  position: relative;
+  z-index: 2;
+  margin: 60px auto 0;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+.match-slider .card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, background 0.3s;
+  backdrop-filter: blur(6px);
+}
+.match-slider .card:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+}
+.card h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.card p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.card a {
+  color: #ff5f5f;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 40px;
+  }
+  .cta-btn {
+    padding: 10px 20px;
+  }
+  nav {
+    display: none;
+  }
+}
